@@ -19,16 +19,18 @@
           align-items: center;
         }
     </style>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
+    
   <p>Saved name is:</p>
 <p id="demo"></p>  
 <script>
 
+  if (user)
 
-
-
+{
+var user = localStorage.getItem("pass");
+document.getElementById("demo").innerHTML = localStorage.getItem("pass");	
+}
+else
  {
 
 
@@ -71,20 +73,7 @@ document.getElementById("demo").innerHTML = localStorage.getItem("pass");
         <div id="qrcode"></div>
     </main>
    
-<script>
 
-const qrcode = new QRCode(document.getElementById('qrcode'), {
-  text: user,
-  width: 256,
-  height: 256,
-  colorDark : '#000',
-  colorLight : '#fff',
-  correctLevel : QRCode.CorrectLevel.H
-});
-
-    
-</script>
-   
    
     
 
