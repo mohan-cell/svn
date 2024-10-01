@@ -24,13 +24,8 @@
 <p id="demo"></p>  
 <script>
 
-  if (user)
+  if(localStorage.getItem("pass") === null)
 
-{
-var user = localStorage.getItem("pass");
-document.getElementById("demo").innerHTML = localStorage.getItem("pass");	
-}
-else
  {
 
 
@@ -51,10 +46,14 @@ var user = devi+" "+date_time;
 
 localStorage.setItem("pass", user);
 
-document.getElementById("demo").innerHTML = localStorage.getItem("pass");
+
 
 }
-
+else
+	{
+		var user = localStorage.getItem("pass");
+document.getElementById("demo").innerHTML = localStorage.getItem("pass");
+ }
 
 </script>
     
